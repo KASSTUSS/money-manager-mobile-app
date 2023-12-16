@@ -7,6 +7,7 @@ import { COLORS } from '../../constants/colors';
 import { ICON_NAMES } from '../../constants/iconNames';
 import { ROUTES } from '../../constants/routes';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import uuid from 'react-uuid';
 
 function getIcon(route: string, isFocused: boolean): ReactNode {
     switch (route) {
@@ -21,7 +22,7 @@ function getIcon(route: string, isFocused: boolean): ReactNode {
     }
 }
 
-export default function MyTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
+export default function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
 
     const { width } = useWindowDimensions();
 
@@ -73,18 +74,22 @@ export default function MyTabBar({ state, descriptors, navigation }: BottomTabBa
                         <>
                             {(index === 2) && (
                                 <>
-                                    <TouchableOpacity onPress={() => { navigation.navigate(ROUTES.ADD_TRANSACTION) }} style={{
-                                        position: 'absolute',
-                                        backgroundColor: COLORS.MAIN,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        width: 70,
-                                        height: 70,
-                                        transform: [{ translateX: -35 }],
-                                        borderRadius: 35,
-                                        left: width / 2,
-                                        bottom: 25,
-                                    }}>
+                                    <TouchableOpacity
+                                        onPress={() => { navigation.navigate(ROUTES.ADD_TRANSACTION) }}
+                                        style={{
+                                            position: 'absolute',
+                                            backgroundColor: COLORS.MAIN,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            width: 70,
+                                            height: 70,
+                                            transform: [{ translateX: -35 }],
+                                            borderRadius: 35,
+                                            left: width / 2,
+                                            bottom: 25,
+                                        }}
+                                        key={uuid()}
+                                    >
                                         <SvgIcon iconName={ICON_NAMES.PLUS} color='#fff' size={32} />
                                     </TouchableOpacity>
                                     <View style={{
@@ -121,7 +126,7 @@ export default function MyTabBar({ state, descriptors, navigation }: BottomTabBa
                                     color: isFocused ? COLORS.MAIN : COLORS.UNSELECTED,
                                     fontSize: 7.5,
                                     textTransform: 'uppercase',
-                                    fontFamily: isFocused ? 'Rubik800' : 'Rubik600' ,
+                                    fontFamily: isFocused ? 'Rubik800' : 'Rubik600',
                                     letterSpacing: -0.18,
                                 }}>
                                     {label.toString()}
@@ -134,9 +139,9 @@ export default function MyTabBar({ state, descriptors, navigation }: BottomTabBa
             <Svg style={{
                 position: 'absolute',
                 bottom: 0,
-                right: 0, 
+                right: 0,
                 zIndex: 0,
-                
+
             }} width={width} height={width / 360 * 58} viewBox="0 0 360 58" fill="none">
                 <Path fill="#ffffff" d="
                         M 0.00 0.00

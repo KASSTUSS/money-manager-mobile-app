@@ -9,18 +9,18 @@ import { ROUTES } from '../../constants/routes';
 import TransactionsScreen from '../../screens/TransactionsScreen';
 import SvgIcon from '../../components/SvgIcon';
 import { ICON_NAMES } from '../../constants/iconNames';
-import MyTabBar from '../../components/TabBar';
 import ServicesScreen from '../../screens/ServicesScreen';
 import SettingsScreen from '../../screens/SettingsScreen';
 import HeaderScreen from '../../components/Header';
 import { COLORS } from '../../constants/colors';
+import TabBar from '../../components/TabBar';
 
 const Tab = createBottomTabNavigator();
 
 export default function HomeTabs(): ReactNode {
     return (
         <Tab.Navigator
-            tabBar={props => <MyTabBar {...props} />}
+            tabBar={props => <TabBar {...props} />}
             initialRouteName={ROUTES.ACCOUNTS}
         >
             <Tab.Screen

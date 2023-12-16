@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { SvgIconProps } from "./types";
 import { ICON_NAMES } from '../../constants/iconNames';
-import { AccountsIconFilled, AccountsIconOutlined, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
+import { AccountsIconFilled, AccountsIconOutlined, CategoryFoodIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
 
 export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): ReactNode {
 
@@ -39,5 +39,9 @@ export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): 
 
         case ICON_NAMES.SEARCH:
             return <SearchIcon color={color} size={size} />;
+        
+
+        case ICON_NAMES.CATEGORY_FOOD:
+            return <CategoryFoodIcon size={size} />;
     }
 }
