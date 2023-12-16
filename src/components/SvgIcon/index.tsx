@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { SvgIconProps } from "./types";
 import { ICON_NAMES } from '../../constants/iconNames';
-import { AccountsIconFilled, AccountsIconOutlined, CategoryFoodIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
+import { AccountsIconFilled, AccountsIconOutlined, CarrencyRatesServiceIcon, CategoryFoodIcon, CategoryOtherIncomeIcon, MoneyBoxServiceIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, StatisticsServiceIcon, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
 
 export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): ReactNode {
 
@@ -43,5 +43,17 @@ export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): 
 
         case ICON_NAMES.CATEGORY_FOOD:
             return <CategoryFoodIcon size={size} />;
+
+        case ICON_NAMES.CATEGORY_OTHER_INCOME:
+            return <CategoryOtherIncomeIcon size={size} />;
+
+        case ICON_NAMES.STATISTICS_APP:
+            return <StatisticsServiceIcon size={size} color={color} />;
+
+        case ICON_NAMES.MONEY_BOX_APP:
+            return <MoneyBoxServiceIcon size={size} color={color} />;
+
+        case ICON_NAMES.CURRENCY_RATES_APP:
+            return <CarrencyRatesServiceIcon size={size} color={color} />;
     }
 }

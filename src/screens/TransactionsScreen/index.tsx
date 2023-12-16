@@ -20,112 +20,19 @@ export default function TransactionsScreen(): ReactNode {
             icon={ICON_NAMES.CATEGORY_FOOD}
             accountTitle='Личные'
             accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
+            categoryColorIndex={15}
+            onPress={() => { }}
           />
           <TransactionBlock
             value={25}
             currency='BYN'
             date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
+            category='Дополнительные доходы'
+            icon={ICON_NAMES.CATEGORY_OTHER_INCOME}
             accountTitle='Личные'
             accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-        </TransactionsGroupContainer>
-        <TransactionsGroupContainer sum={12.50} currency='BYN' date={new Date()}>
-          <TransactionBlock
-            value={-12.5}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-          <TransactionBlock
-            value={25}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-          <TransactionBlock
-            value={25}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-
-          <TransactionBlock
-            value={25}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-        </TransactionsGroupContainer>
-        <TransactionsGroupContainer sum={12.50} currency='BYN' date={new Date()}>
-          <TransactionBlock
-            value={-12.5}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-          <TransactionBlock
-            value={-12.5}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-          <TransactionBlock
-            value={-12.5}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-          <TransactionBlock
-            value={-12.5}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
-          />
-          <TransactionBlock
-            value={25}
-            currency='BYN'
-            date={new Date()}
-            category='Продукты'
-            icon={ICON_NAMES.CATEGORY_FOOD}
-            accountTitle='Личные'
-            accountGradient={colorsGradients[0]}
-            categoryColorIndex={9}
+            categoryColorIndex={7}
+            onPress={() => {}}
           />
         </TransactionsGroupContainer>
       </View>

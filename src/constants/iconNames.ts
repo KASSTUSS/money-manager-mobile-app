@@ -16,5 +16,6 @@ export const enum ICON_NAMES {
   SHOPPING_LISTS_APP = "shopping-lists-app",
   CURRENCY_RATES_APP = "currency-rates-app",
 
-  CATEGORY_FOOD = 'category-food',
+  CATEGORY_FOOD = "category-food",
+  CATEGORY_OTHER_INCOME = "category-other-income",
 }

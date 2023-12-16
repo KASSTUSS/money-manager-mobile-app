@@ -1,9 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { FC, ReactNode } from 'react';
-import AccountScreen from '../../screens/AccountsScreen';
+import { ReactNode } from 'react';
 import HomeTabs from '../HomeTabs';
 import { ROUTES, SCREENS_TITLE } from '../../constants/routes';
+import SettingsScreen from '../../screens/SettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ export default function MainStack(): ReactNode {
             headerShown: false,
           }}
         />
-        <Stack.Screen name={ROUTES.ADD_TRANSACTION} component={AccountScreen} 
+        <Stack.Screen name={ROUTES.ADD_TRANSACTION} component={SettingsScreen} 
           options={{
             headerTitle: SCREENS_TITLE.ADD_TRANSACTION,
             gestureDirection: 'vertical',
@@ -26,13 +26,13 @@ export default function MainStack(): ReactNode {
               open: {
                 animation: 'timing',
                 config: {
-                  duration: 125,
+                  duration: 150,
                 },
               },
               close: {
                 animation: 'timing',
                 config: {
-                  duration: 125,
+                  duration: 150,
                 },
               }
             }

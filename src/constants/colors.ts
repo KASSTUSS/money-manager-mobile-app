@@ -17,6 +17,13 @@ export const enum COLORS {
   TRANSACTION_DATE = "#b3b3b3",
   TRANSACTION_RED = "#FF5959",
   TRANSACTION_GREEN = "#46C85B",
+
+  SERVICE_BG = "#E0E6E4",
+}
+
+export const enum COLORS_SERVICES {
+  MONEY_BOX = "#38B0C0",
+  CURRENCY_RATES = "#3755BF",
 }
 
 export const colorsGradients = [
