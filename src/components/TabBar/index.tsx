@@ -92,19 +92,22 @@ export default function TabBar({ state, descriptors, navigation }: BottomTabBarP
                                     >
                                         <SvgIcon iconName={ICON_NAMES.PLUS} color='#fff' size={32} />
                                     </TouchableOpacity>
-                                    <View style={{
-                                        width: 120,
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        paddingTop: 40,
-                                    }} >
+                                    <View
+                                        key={uuid()}
+                                        style={{
+                                            width: 120,
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            paddingTop: 40,
+                                        }} >
 
                                     </View>
                                 </>
                             )
                             }
                             <TouchableOpacity
+                                key={uuid()}
                                 accessibilityRole="button"
                                 accessibilityState={isFocused ? { selected: true } : {}}
                                 accessibilityLabel={options.tabBarAccessibilityLabel}
