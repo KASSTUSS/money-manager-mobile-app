@@ -71,7 +71,7 @@ export default function TabBar({ state, descriptors, navigation }: BottomTabBarP
                     };
 
                     return (
-                        <>
+                        <React.Fragment key={uuid()}>
                             {(index === 2) && (
                                 <>
                                     <TouchableOpacity
@@ -88,12 +88,10 @@ export default function TabBar({ state, descriptors, navigation }: BottomTabBarP
                                             left: width / 2,
                                             bottom: 25,
                                         }}
-                                        key={uuid()}
                                     >
                                         <SvgIcon iconName={ICON_NAMES.PLUS} color='#fff' size={32} />
                                     </TouchableOpacity>
                                     <View
-                                        key={uuid()}
                                         style={{
                                             width: 120,
                                             display: 'flex',
@@ -107,7 +105,6 @@ export default function TabBar({ state, descriptors, navigation }: BottomTabBarP
                             )
                             }
                             <TouchableOpacity
-                                key={uuid()}
                                 accessibilityRole="button"
                                 accessibilityState={isFocused ? { selected: true } : {}}
                                 accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -135,7 +132,7 @@ export default function TabBar({ state, descriptors, navigation }: BottomTabBarP
                                     {label.toString()}
                                 </Text>
                             </TouchableOpacity>
-                        </>
+                        </React.Fragment>
                     );
                 })}
             </View>

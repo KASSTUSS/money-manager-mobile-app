@@ -24,3 +24,18 @@ export default function formatDate(inputDate: Date): string {
     }
   }
 }
+
+
+export function formatDateToDDMMYYYY(date: Date):string {
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Месяцы начинаются с 0
+  const year = date.getFullYear();
+
+  return `${day}.${month}.${year}`;
+}
+
+
+export function parseDDMMYYYYToDate(dateString: string): Date {
+  const [day, month, year] = dateString.split(".").map(Number);
+  return new Date(year, month - 1, day); // Месяцы начинаются с 0
+}

@@ -6,9 +6,6 @@ export const styles = StyleSheet.create({
     minHeight: "100%",
   },
   accountGroups: {
-    borderBottomWidth: 1,
-    borderBottomColor: COLORS.MAIN_TEXT,
-    borderStyle: "dotted",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

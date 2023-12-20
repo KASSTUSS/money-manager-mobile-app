@@ -4,4 +4,5 @@ export type HeaderScreenProps = {
     title: string;
     innerComponent?: ReactNode;
     buttons?: ReactNode[];
+    backButton?: boolean;
 }

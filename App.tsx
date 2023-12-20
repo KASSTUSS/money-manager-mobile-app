@@ -1,21 +1,24 @@
-import 'react-native-gesture-handler';
-import MainStack from './src/navigation/MainStack';
-import { ReactNode, useEffect } from 'react';
-import * as SplashScreen from 'expo-splash-screen';
+import React, { ReactNode, useEffect } from 'react';
 import { useFonts } from 'expo-font';
-import { View } from 'react-native';
+import { PaperProvider } from 'react-native-paper';
+import * as SplashScreen from 'expo-splash-screen';
+import 'react-native-gesture-handler';
+
+import { createTablesIfNotExists, deleteFromTables } from './src/db/tablesDB';
+import { fontsFiles } from './src/constants/fonts';
+import MainStack from './src/navigation/MainStack';
+
 
 SplashScreen.preventAutoHideAsync();
 
 export default function App(): ReactNode {
 
-  const [fontsLoaded] = useFonts({
-    "Rubik800": require("./src/assets/fonts/Rubik-ExtraBold.ttf"),
-    "Rubik700": require("./src/assets/fonts/Rubik-Bold.ttf"),
-    "Rubik600": require("./src/assets/fonts/Rubik-SemiBold.ttf"),
-    "Rubik500": require("./src/assets/fonts/Rubik-Medium.ttf"),
-    "Rubik400": require("./src/assets/fonts/Rubik-Regular.ttf"),
-  })
+  useEffect(() => {
+    createTablesIfNotExists();
+    deleteFromTables();
+  }, []);
+
+  const [fontsLoaded] = useFonts(fontsFiles)
 
   useEffect(() => {
     if (fontsLoaded) {
@@ -28,6 +31,8 @@ export default function App(): ReactNode {
   }
 
   return (
-    <MainStack />
+    <PaperProvider>
+      <MainStack />
+    </PaperProvider>
   );
 }

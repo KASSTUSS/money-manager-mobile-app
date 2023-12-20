@@ -15,12 +15,12 @@ export default function TransactionsGroupContainer({ children, sum, currency, da
     return (
         <View style={styles.transactionsGroupContainer}>
             <View style={styles.transactionsGroupTitle}>
-                <Text style={[styles.transactionsGroupTitleDate, {
+                {/* <Text style={[styles.transactionsGroupTitleDate, {
                     color: sum >= 0 ? COLORS.TRANSACTIONS_GROUP_GREEN : COLORS.TRANSACTIONS_GROUP_RED,
                 }]}>{titleDate}</Text>
                 <Text style={[styles.transactionsGroupTitleValue, {
                     color: sum >= 0 ? COLORS.TRANSACTIONS_GROUP_GREEN : COLORS.TRANSACTIONS_GROUP_RED,
-                }]}>({`${sum > 0 ? '+' : '-'}${sum} ${currency}`})</Text>
+                }]}>({`${sum > 0 ? '+' : '-'}${sum} ${currency}`})</Text> */}
             </View>
             <View style={styles.transactionsContainer}>
                 {children}

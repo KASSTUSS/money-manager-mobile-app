@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { SvgIconProps } from "./types";
 import { ICON_NAMES } from '../../constants/iconNames';
-import { AccountsIconFilled, AccountsIconOutlined, CarrencyRatesServiceIcon, CategoryFoodIcon, CategoryOtherIncomeIcon, MoneyBoxServiceIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, StatisticsServiceIcon, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
+import { AccountsIconFilled, AccountsIconOutlined, CarrencyRatesServiceIcon, CategoryFoodIcon, CategoryOtherIncomeIcon, CheckIcon, GoBackIcon, MoneyBoxServiceIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, StatisticsServiceIcon, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
 
 export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): ReactNode {
 
@@ -55,5 +55,11 @@ export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): 
 
         case ICON_NAMES.CURRENCY_RATES_APP:
             return <CarrencyRatesServiceIcon size={size} color={color} />;
+
+        case ICON_NAMES.GO_BACK:
+            return <GoBackIcon size={size} color={color} />;
+
+        case ICON_NAMES.CHECK:
+            return <CheckIcon size={size} color={color} />;
     }
 }

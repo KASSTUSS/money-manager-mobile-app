@@ -1,19 +1,15 @@
 import { ReactNode } from 'react';
 import React from 'react';
-import {
-    TouchableOpacity,
-} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import AccountScreen from '../../screens/AccountsScreen';
 import { ROUTES } from '../../constants/routes';
 import TransactionsScreen from '../../screens/TransactionsScreen';
 import SvgIcon from '../../components/SvgIcon';
 import { ICON_NAMES } from '../../constants/iconNames';
-import ServicesScreen from '../../screens/ServicesScreen';
 import SettingsScreen from '../../screens/SettingsScreen';
 import HeaderScreen from '../../components/Header';
-import { COLORS } from '../../constants/colors';
 import TabBar from '../../components/TabBar';
+import StatisticsScreen from '../../screens/StatisticsScreen';
+import AccountsScreen from '../../screens/AccountsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,7 +21,7 @@ export default function HomeTabs(): ReactNode {
         >
             <Tab.Screen
                 name={ROUTES.ACCOUNTS}
-                component={AccountScreen}
+                component={AccountsScreen}
                 options={{
                     header: () => <HeaderScreen title='Счета' />,
                     title: 'Счета',
@@ -36,25 +32,18 @@ export default function HomeTabs(): ReactNode {
                 name={ROUTES.TRANSACTIONS}
                 component={TransactionsScreen}
                 options={{
-                    header: () => <HeaderScreen title='Записи' buttons={[
-                        <TouchableOpacity>
-                            <SvgIcon iconName={ICON_NAMES.SEARCH} color={COLORS.MAIN} size={25} />
-                        </TouchableOpacity>,
-                        <TouchableOpacity>
-                            <SvgIcon iconName={ICON_NAMES.PLUS} color={COLORS.MAIN} size={25} />
-                        </TouchableOpacity>
-                    ]} />,
+                    header: () => <HeaderScreen title='Записи' buttons={[]} />,
                     title: 'Записи',
                     tabBarIcon: ({ focused, size, color }) => <SvgIcon iconName={ICON_NAMES.TRANSACTIONS_TAB} fill={focused} size={size} color={color} />
                 }}
             />
             <Tab.Screen
                 name={ROUTES.SERVICES}
-                component={ServicesScreen}
+                component={StatisticsScreen}
                 options={{
-                    header: () => <HeaderScreen title='Инструменты' />,
-                    title: 'Инструменты',
-                    tabBarIcon: ({ focused, size, color }) => <SvgIcon iconName={ICON_NAMES.TRANSACTIONS_TAB} fill={focused} size={size} color={color} />
+                    header: () => <HeaderScreen title='Статистика и аналитика' />,
+                    title: 'Статистика',
+                    tabBarIcon: ({ focused, size, color }) => <SvgIcon iconName={ICON_NAMES.STATISTICS_APP} size={size} color={color} />
                 }}
             />
             <Tab.Screen
