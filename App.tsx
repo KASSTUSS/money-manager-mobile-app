@@ -4,7 +4,7 @@ import { PaperProvider } from 'react-native-paper';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-gesture-handler';
 
-import { createTablesIfNotExists, deleteFromTables } from './src/db/tablesDB';
+import { createTablesIfNotExists } from './src/db/tablesDB';
 import { fontsFiles } from './src/constants/fonts';
 import MainStack from './src/navigation/MainStack';
 
@@ -12,13 +12,11 @@ import MainStack from './src/navigation/MainStack';
 SplashScreen.preventAutoHideAsync();
 
 export default function App(): ReactNode {
+  const [fontsLoaded] = useFonts(fontsFiles)
 
   useEffect(() => {
     createTablesIfNotExists();
-    deleteFromTables();
   }, []);
-
-  const [fontsLoaded] = useFonts(fontsFiles)
 
   useEffect(() => {
     if (fontsLoaded) {
@@ -36,3 +34,5 @@ export default function App(): ReactNode {
     </PaperProvider>
   );
 }
+
+

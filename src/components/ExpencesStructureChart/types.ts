@@ -10,4 +10,5 @@ export type ExpenceDataChart = {
 
 export type ExpencesStructureChartProps = {
   expencesStructureData: ExpenceDataChart[];
+  operationsType: "-" | "+";
 };

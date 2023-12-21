@@ -32,13 +32,12 @@ export function deleteFromTables() {
   db.transaction((tx) => {
     tx.executeSql(
       `
-        DELETE FROM accounts;
+        DELETE FROM transactions;
       `
     );
-
     tx.executeSql(
       `
-        DELETE FROM transactions;
+        DELETE FROM accounts;
       `
     );
   });

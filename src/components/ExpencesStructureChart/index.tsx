@@ -6,13 +6,13 @@ import { PieChart } from "react-native-chart-kit";
 import { COLORS } from "../../constants/colors";
 
 
-export default function ExpencesStructureChart({ expencesStructureData }: ExpencesStructureChartProps): ReactNode {
+export default function ExpencesStructureChart({ expencesStructureData, operationsType }: ExpencesStructureChartProps): ReactNode {
 
     return (
         <View style={styles.chartContainer}>
             <View style={styles.currentBalanceTextContainer}>
-                <Text style={styles.currentBalanceTextLabel}>Сумма расходов</Text>
-                <Text style={styles.currentBalanceTextValue}>-110.07 BYN</Text>
+                <Text style={styles.currentBalanceTextLabel}>{operationsType === '+' ? 'Сумма доходов' : 'Сумма расходов'}</Text>
+                <Text style={operationsType === '+' ? styles.currentBalanceTextValuePos : styles.currentBalanceTextValueNeg}>{`${operationsType}${expencesStructureData.map(data => data.sum).reduce((totalSum, sum) => totalSum += sum).toFixed(2)}`} BYN</Text>
             </View>
             <PieChart
                 data={expencesStructureData}

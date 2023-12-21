@@ -5,7 +5,7 @@ export type TransactionBlockProps = {
   currency: string;
   date: Date;
   category: string;
-  categoryColorIndex: number;
+  categoryColorIndex: string;
   icon: string;
   accountTitle: string;
   accountGradient: string[];

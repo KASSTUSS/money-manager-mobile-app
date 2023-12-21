@@ -12,7 +12,7 @@ export default function BalanceTrendChart({ labels, balanceData }: BalanceTrendC
         <View style={styles.chartContainer}>
             <View style={styles.currentBalanceTextContainer}>
                 <Text style={styles.currentBalanceTextLabel}>Сегодня</Text>
-                <Text style={styles.currentBalanceTextValue}>242.11 BYN</Text>
+                <Text style={styles.currentBalanceTextValue}>{balanceData.at(-1)?.toFixed(2)} BYN</Text>
             </View>
             <LineChart
                 data={{
@@ -24,8 +24,10 @@ export default function BalanceTrendChart({ labels, balanceData }: BalanceTrendC
                     ],
                 }}
                 width={Dimensions.get("screen").width - 90}
+                withDots={false}
                 height={175}
                 yLabelsOffset={10}
+                
                 xLabelsOffset={-1}
                 yAxisInterval={1} // optional, defaults to 1
                 chartConfig={{
@@ -39,11 +41,6 @@ export default function BalanceTrendChart({ labels, balanceData }: BalanceTrendC
                     style: {
                         borderRadius: 16,
                     },
-                    propsForDots: {
-                        r: "5",
-                        strokeWidth: "1.5",
-                        stroke: COLORS.MAIN,
-                    }
                 }}
                 bezier
                 style={{

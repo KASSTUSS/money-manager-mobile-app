@@ -38,10 +38,12 @@ export default function TransactionsScreen(): ReactNode {
               category={
                 categories.find(value => value.id == transaction.category_id)?.name 
                 || 'Неизвестная категория'}
-              icon={ICON_NAMES.CATEGORY_FOOD}
+              icon={categories.find(value => value.id == transaction.category_id)?.icon
+                || ICON_NAMES.PLUS}
               accountTitle={transaction.account_name}
               accountGradient={colorsGradients[transaction.color_scheme]}
-              categoryColorIndex={15}
+              categoryColorIndex={categories.find(value => value.id == transaction.category_id)?.color
+                || '#757575'}
               onPress={() => { }}
             />
           ))}

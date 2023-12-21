@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { SvgIconProps } from "./types";
 import { ICON_NAMES } from '../../constants/iconNames';
-import { AccountsIconFilled, AccountsIconOutlined, CarrencyRatesServiceIcon, CategoryFoodIcon, CategoryOtherIncomeIcon, CheckIcon, GoBackIcon, MoneyBoxServiceIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, StatisticsServiceIcon, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
+import { AccountsIconFilled, AccountsIconOutlined, CarrencyRatesServiceIcon, CategoryBus, CategoryCinema, CategoryClothes, CategoryDrugstore, CategoryFoodIcon, CategoryFuel, CategoryGift, CategoryHouseServices, CategoryOtherIncomeIcon, CategorySalary, CategoryStudy, CategoryStudyIncome, CheckIcon, GoBackIcon, MoneyBoxServiceIcon, PlusIcon, SearchIcon, ServicesIconFilled, ServicesIconOutlined, SettingsIconFilled, SettingsIconOutlined, StatisticsServiceIcon, TransactionsIconFilled, TransactionsIconOutlined } from './icons';
 
 export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): ReactNode {
 
@@ -61,5 +61,36 @@ export default function SvgIcon({ iconName, size, color, fill }: SvgIconProps): 
 
         case ICON_NAMES.CHECK:
             return <CheckIcon size={size} color={color} />;
+
+
+        case ICON_NAMES.CATEGORY_BUS:
+            return <CategoryBus size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_DRUGSTORE:
+            return <CategoryDrugstore size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_CINEMA:
+            return <CategoryCinema size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_FUEL:
+            return <CategoryFuel size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_GIFT:
+            return <CategoryGift size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_STUDY:
+            return <CategoryStudy size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_HOUSE_SERVICES:
+            return <CategoryHouseServices size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_CLOTHES:
+            return <CategoryClothes size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_STUDY_INCOME:
+            return <CategoryStudyIncome size={size} color={color} />;
+
+        case ICON_NAMES.CATEGORY_SALARY:
+            return <CategorySalary size={size} color={color} />;
     }
 }

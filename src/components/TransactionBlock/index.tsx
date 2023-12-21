@@ -30,7 +30,7 @@ export default function TransactionBlock({
         <TouchableOpacity onPress={onPress} style={styles.transactionContainer}>
             <View style={styles.transactionIconContainer}>
                 <View style={[styles.transactionIconCircle, {
-                    backgroundColor: categoriesColors[categoryColorIndex],
+                    backgroundColor: categoryColorIndex,
                 }]}>
                     <SvgIcon iconName={icon} size={28} color="#000" />
                 </View>

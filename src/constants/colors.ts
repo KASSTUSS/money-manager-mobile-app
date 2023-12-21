@@ -40,7 +40,7 @@ export const colorsGradients = [
 
 export const categoriesColors = [
   "#8B0000",
-  "DC143C",
+  "#DC143C",
   "#CD5C5C",
   "#FF69B4",
   "#C71585",

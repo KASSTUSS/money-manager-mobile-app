@@ -18,6 +18,17 @@ export const enum ICON_NAMES {
 
   CATEGORY_FOOD = "category-food",
   CATEGORY_OTHER_INCOME = "category-other-income",
+  CATEGORY_BUS = "category-bus",
+  CATEGORY_DRUGSTORE = "category-drugstore",
+  CATEGORY_CINEMA = "category-cinema",
+  CATEGORY_FUEL = "category-fuel",
+  CATEGORY_GIFT = "category-gift",
+  CATEGORY_STUDY = "category-stusy",
+  CATEGORY_HOUSE_SERVICES = "category-house-services",
+  CATEGORY_CLOTHES = "category-clothes",
+  CATEGORY_STUDY_INCOME = "category-study-income",
+  CATEGORY_SALARY = "category-salary",
+
   GO_BACK = "go-back",
-  CHECK = "check"
+  CHECK = "check",
 }

@@ -11,18 +11,23 @@ export const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
 
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   currentBalanceTextLabel: {
     fontFamily: "Rubik400",
     fontSize: 15,
     color: COLORS.MAIN_TEXT,
   },
-  currentBalanceTextValue: {
+  currentBalanceTextValuePos: {
     fontFamily: "Rubik600",
     fontSize: 21,
-    color: COLORS.MAIN_RED,
+    color: COLORS.TRANSACTION_GREEN,
+  },
+  currentBalanceTextValueNeg: {
+    fontFamily: "Rubik600",
+    fontSize: 21,
+    color: COLORS.TRANSACTION_RED,
   },
 });

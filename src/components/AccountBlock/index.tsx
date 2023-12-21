@@ -17,13 +17,13 @@ export default function AccountBlock({ title, value, colorsGradient, focused, on
     return (
         <Pressable onPress={onPress} onLongPress={onLongPress} style={styles.accountBlock}>
             <LinearGradient
-                colors={isFocused ? colorsGradient : [COLORS.UNSELECTED_ACCOUNT, COLORS.UNSELECTED]}
+                colors={colorsGradient}
                 start={{ x: 0, y: 0.5 }}
                 end={{ x: 1, y: 0.5 }}
                 style={styles.gradientContainer}
             >
                 <Text style={styles.title}>{title}</Text>
-                <Text style={styles.value}>{value}</Text>
+                <Text style={styles.value}>{parseFloat(value).toFixed(2)} BYN</Text>
             </LinearGradient>
         </Pressable>
     )

@@ -43,7 +43,7 @@ export default function HomeTabs(): ReactNode {
                 options={{
                     header: () => <HeaderScreen title='Статистика и аналитика' />,
                     title: 'Статистика',
-                    tabBarIcon: ({ focused, size, color }) => <SvgIcon iconName={ICON_NAMES.STATISTICS_APP} size={size} color={color} />
+                    tabBarIcon: ({ focused, size, color }) => <SvgIcon iconName={ICON_NAMES.PLUS} size={size} color={color} />
                 }}
             />
             <Tab.Screen
